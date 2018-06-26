@@ -9,7 +9,7 @@ Student::Student(string stuName, string stuId, int stuAge, string stuSex)
 	this->stuName = stuName;
 	this->stuId = stuId;
 	this->stuAge = stuAge;
-	this->stuSex;
+	this->stuSex = stuSex;
 }
 
 Student::~Student()

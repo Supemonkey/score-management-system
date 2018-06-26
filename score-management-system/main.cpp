@@ -6,11 +6,13 @@ using namespace std;
 
 int main()
 {
-	Node s;
-	Node *phead, *pend, *pnew;
+	StuNode s;
+	StuNode *phead, *pend, *pnew;
 	phead = pend = pnew = NULL;
-	menuUI();
-	menuSelect();
+	phead = initStrt(phead,pend,pnew);
+	show(phead);
+	//menuUI();
+	//menuSelect();
 	system("pause");
 	return 0;
 }

@@ -120,6 +120,8 @@
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="stuCreate.cpp" />
     <ClCompile Include="Student.cpp" />
+    <ClCompile Include="stuShow.cpp" />
+    <ClCompile Include="subCreate.cpp" />
     <ClCompile Include="Subject.cpp" />
   </ItemGroup>
   <ItemGroup>

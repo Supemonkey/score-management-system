@@ -39,6 +39,9 @@
     <ClCompile Include="stuShow.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="subShow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Subject.h">

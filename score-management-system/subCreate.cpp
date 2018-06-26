@@ -6,29 +6,28 @@ using namespace std;
 #include "Subject.h"
 
 
-//StuNode *initStrt(StuNode *ph, StuNode *pe, StuNode *pn)
-//{
-//	string stuName;
-//	string stuId;
-//	int stuAge;
-//	string stuSex;
-//	pn = new StuNode;
-//
-//	//都接到设计为空节点不适用
-//	ph = pe = pn;
-//	while (1) {//输入0停止输入
-//		cin >> stuName;
-//		if (stuName == "0")break; //判断用户是否继续输入数据
-//		cin >> stuId >> stuAge >> stuSex;
-//		pn = new StuNode;
-//		pn->s = Student(stuName, stuId, stuAge, stuSex);
-//		pe->next = pn;
-//		pe = pn;
-//	}
-//	pn = new StuNode;
-//	pn->s = Student();//设计一个为节点，为未使用
-//	pe->next = pn;
-//	pe = pn;
-//	pe->next = NULL;
-//	return ph;
-//}
+subNode *initSub(subNode *ph, subNode *pe, subNode *pn)
+{
+	string subjectId;
+	string subjectName;
+	string stuId;
+	pn = new subNode;
+
+	//都接到设计为空节点不适用
+	ph = pe = pn;
+	while (1) {//输入0停止输入
+		cin >> stuId;
+		if (stuId == "0")break; //判断用户是否继续输入数据
+		cin >> subjectName >> subjectId;
+		pn = new subNode;
+		pn->subLinkList = Subject(stuId, subjectName, subjectId);
+		pe->next = pn;
+		pe = pn;
+	}
+	pn = new subNode;
+	pn->subLinkList = Subject();//设计一个为节点，为未使用
+	pe->next = pn;
+	pe = pn;
+	pe->next = NULL;
+	return ph;
+}

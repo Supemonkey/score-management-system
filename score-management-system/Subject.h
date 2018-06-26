@@ -6,9 +6,12 @@ class Subject
 {
 public:
 	Subject();
+	Subject(string ,string ,string );
 	~Subject();
+	void showSubject();
 private:
-	int subjectId;
+	string subjectId;
 	string subjectName;
+	string stuId;
 };
 

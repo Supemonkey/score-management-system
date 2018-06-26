@@ -2,7 +2,7 @@
 #include "Student.h"
 #include "mainHead.h"
 
-void show(StuNode *ph)
+void stuShow(stuNode *ph)
 {
 	if (ph->next != NULL) {
 		ph = ph->next;//可以设置异常抛出

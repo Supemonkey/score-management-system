@@ -7,7 +7,7 @@ typedef struct stuArray
 {
 	Student stuLinkList;
 	stuArray *next;
-}StuNode;//学生基本信息链表结点
+}stuNode;//学生基本信息链表结点
 
 typedef struct subArray
 {
@@ -22,7 +22,9 @@ typedef struct scoArray
 }scoNode;//专业成绩链表结点
 
 
-StuNode *initStrt(StuNode *, StuNode *, StuNode *);
+stuNode *initStrt(stuNode *, stuNode *, stuNode *);
+subNode *initSub(subNode *, subNode *, subNode *);
 void menuUI();
 void menuSelect();
-void show(StuNode *);
+void stuShow(stuNode *);
+void subShow(subNode *);

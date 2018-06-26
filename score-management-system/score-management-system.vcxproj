@@ -116,11 +116,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="menuSelect.cpp" />
     <ClCompile Include="Score.cpp" />
+    <ClCompile Include="stuCreate.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="Subject.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="mainHead.h" />
     <ClInclude Include="Score.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Subject.h" />

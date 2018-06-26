@@ -27,6 +27,12 @@
     <ClCompile Include="Score.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="menuSelect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stuCreate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Subject.h">
@@ -36,6 +42,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Score.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mainHead.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

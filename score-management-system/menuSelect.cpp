@@ -12,20 +12,13 @@ void __menuASelect();
 void __menuB();
 void __menuBSelect();
 
-void __menuC();
-void __menuCSelect();
-
-void __menuD();
-void __menuDSelect();
-
 void __menuE();
-void __menuESelect();
-
 void __menuF();
-void __menuFSelect();
+void __menuC();
+void __menuD();
+
 
 void __menuG();
-void __menuGSelect();
 void menuUI()
 {
 
@@ -83,27 +76,27 @@ void menuSelect()
 	case 'C':
 	case 'c':system("cls");
 		__menuC();
-		__menuCSelect();
+		__menuASelect();
 		break;
 	case 'D':
 	case 'd':system("cls");
 		__menuD();
-		__menuDSelect();
+		__menuASelect();
 		break;
 	case 'E':
 	case 'e':system("cls");
 		__menuE();
-		__menuESelect();
+		__menuASelect();
 		break;
 	case 'F':
 	case 'f':system("cls");
 		__menuF();
-		__menuFSelect();
+		__menuBSelect();
 		break;
 	case 'G':
 	case 'g':system("cls");
 		__menuG();
-		__menuGSelect();
+		__menuASelect();
 		break;
 	case 'H':
 	case 'h':cout << "H" << endl;
@@ -155,6 +148,24 @@ void __menuASelect()
 	}
 }
 
+
+void __menuBSelect()
+{
+	char ch;
+	cin >> ch;
+	switch (ch)
+	{
+	case 'a':
+	case 'A':cout << "A" << endl;
+		break;
+	case 'b':
+	case 'B':cout << "B" << endl;
+		break;
+	default:cout << "不存在该选项!" << endl;
+		break;
+	}
+}
+
 void __menuB()
 {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
@@ -173,22 +184,7 @@ void __menuB()
 	cout << "请选择：" << endl;
 }
 
-void __menuBSelect()
-{
-	char ch;
-	cin >> ch;
-	switch (ch)
-	{
-	case 'a':
-	case 'A':cout << "A" << endl;
-		break;
-	case 'b':
-	case 'B':cout << "B" << endl;
-		break;
-	default:cout << "不存在该选项!" << endl;
-		break;
-	}
-}
+
 
 void __menuC()
 {
@@ -210,26 +206,6 @@ void __menuC()
 	cout << "**" << endl;
 	cout << "**********************" << endl;
 	cout << "请选择：" << endl;
-}
-
-void __menuCSelect()
-{
-	char ch;
-	cin >> ch;
-	switch (ch)
-	{
-	case 'a':
-	case 'A':cout << "A" << endl;
-		break;
-	case 'b':
-	case 'B':cout << "B" << endl;
-		break;
-	case 'c':
-	case 'C':cout << "C" << endl;
-		break;
-	default:cout << "不存在该选项!" << endl;
-		break;
-	}
 }
 
 void __menuD()
@@ -254,26 +230,6 @@ void __menuD()
 	cout << "请选择：" << endl;
 }
 
-void __menuDSelect()
-{
-	char ch;
-	cin >> ch;
-	switch (ch)
-	{
-	case 'a':
-	case 'A':cout << "A" << endl;
-		break;
-	case 'b':
-	case 'B':cout << "B" << endl;
-		break;
-	case 'c':
-	case 'C':cout << "C" << endl;
-		break;
-	default:cout << "不存在该选项!" << endl;
-		break;
-	}
-}
-
 void __menuE()
 {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
@@ -292,22 +248,6 @@ void __menuE()
 	cout << "请选择：" << endl;
 }
 
-void __menuESelect()
-{
-	char ch;
-	cin >> ch;
-	switch (ch)
-	{
-	case 'a':
-	case 'A':cout << "A" << endl;
-		break;
-	case 'b':
-	case 'B':cout << "B" << endl;
-		break;
-	default:cout << "不存在该选项!" << endl;
-		break;
-	}
-}
 
 void __menuF()
 {
@@ -327,22 +267,7 @@ void __menuF()
 	cout << "请选择：" << endl;
 }
 
-void __menuFSelect()
-{
-	char ch;
-	cin >> ch;
-	switch (ch)
-	{
-	case 'a':
-	case 'A':cout << "A" << endl;
-		break;
-	case 'b':
-	case 'B':cout << "B" << endl;
-		break;
-	default:cout << "不存在该选项!" << endl;
-		break;
-	}
-}
+
 
 void __menuG()
 {
@@ -366,22 +291,3 @@ void __menuG()
 	cout << "请选择：" << endl;
 }
 
-void __menuGSelect()
-{
-	char ch;
-	cin >> ch;
-	switch (ch)
-	{
-	case 'a':
-	case 'A':cout << "A" << endl;
-		break;
-	case 'b':
-	case 'B':cout << "B" << endl;
-		break;
-	case 'c':
-	case 'C':cout << "C" << endl;
-		break;
-	default:cout << "不存在该选项!" << endl;
-		break;
-	}
-}

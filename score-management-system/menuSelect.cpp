@@ -21,7 +21,7 @@ void __menuD();
 void __menuG();
 void menuUI()
 {
-
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED);
 	time_t t = time(0);
 	char tmp[64];
 	strftime(tmp, sizeof(tmp), "%Y/%m/%d %X %A", localtime(&t));
@@ -58,6 +58,7 @@ void menuUI()
 
 void menuSelect()
 {
+	menuUI();
 	char ch;
 	cout << "请选择：" << endl;
 	cin >> ch;
@@ -86,7 +87,7 @@ void menuSelect()
 	case 'E':
 	case 'e':system("cls");
 		__menuE();
-		__menuASelect();
+		__menuBSelect();
 		break;
 	case 'F':
 	case 'f':system("cls");
@@ -123,7 +124,11 @@ void __menuA()
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 	cout << "C.创建学生成绩信息";
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl;
+	cout << "**" << endl << "**";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
+	cout << "D.返回";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "            **" << endl;
 	cout << "**********************"<<endl;
 	cout << "请选择：" << endl;
 }
@@ -143,6 +148,10 @@ void __menuASelect()
 	case 'c':
 	case 'C':cout << "C" << endl;
 		break;
+	case 'd':
+	case 'D':system("cls");
+		menuSelect();
+		break;
 	default:cout << "不存在该选项!" << endl;
 		break;
 	}
@@ -160,6 +169,10 @@ void __menuBSelect()
 		break;
 	case 'b':
 	case 'B':cout << "B" << endl;
+		break;
+	case 'c':
+	case 'C':system("cls");
+		menuSelect();
 		break;
 	default:cout << "不存在该选项!" << endl;
 		break;
@@ -179,8 +192,12 @@ void __menuB()
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 	cout << "B.添加学生专业信息";
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl
-		<< "**********************" << endl;
+	cout << "**" << endl << "**";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
+	cout << "C.返回";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "            **" << endl;
+	cout << "**********************" << endl;
 	cout << "请选择：" << endl;
 }
 
@@ -203,7 +220,11 @@ void __menuC()
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 	cout << "C.删除学生成绩信息";
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl;
+	cout << "**" << endl << "**";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
+	cout << "D.返回";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "            **" << endl;
 	cout << "**********************" << endl;
 	cout << "请选择：" << endl;
 }
@@ -225,7 +246,11 @@ void __menuD()
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 	cout << "C.修改学生成绩信息";
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl;
+	cout << "**" << endl << "**";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
+	cout << "D.返回";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "            **" << endl;
 	cout << "**********************" << endl;
 	cout << "请选择：" << endl;
 }
@@ -243,8 +268,12 @@ void __menuE()
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 	cout << "B.通过学号查找    ";
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl
-		<< "**********************" << endl;
+	cout << "**" << endl << "**";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
+	cout << "C.返回";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "            **" << endl;
+	cout << "**********************" << endl;
 	cout << "请选择：" << endl;
 }
 
@@ -262,8 +291,12 @@ void __menuF()
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 	cout << "B.根据总分排序    ";
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl
-		<< "**********************" << endl;
+	cout << "**" << endl << "**";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
+	cout << "C.返回";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "            **" << endl;
+	cout << "**********************" << endl;
 	cout << "请选择：" << endl;
 }
 
@@ -286,7 +319,11 @@ void __menuG()
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 	cout << "C.查看学生成绩信息";
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl;
+	cout << "**" << endl << "**";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
+	cout << "D.返回";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "            **" << endl;
 	cout << "**********************" << endl;
 	cout << "请选择：" << endl;
 }

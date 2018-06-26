@@ -6,7 +6,6 @@ using namespace std;
 
 int main()
 {
-	StuNode s;
 	StuNode *phead, *pend, *pnew;
 	phead = pend = pnew = NULL;
 	phead = initStrt(phead,pend,pnew);

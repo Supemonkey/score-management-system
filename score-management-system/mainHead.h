@@ -5,7 +5,7 @@
 
 typedef struct stuArray
 {
-	Student s;
+	Student stuLinkList;
 	stuArray *next;
 }StuNode;//学生基本信息链表结点
 

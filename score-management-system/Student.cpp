@@ -1,7 +1,8 @@
 #include "Student.h"
-#define UNUSED -404
 #include <iostream>
+#include <iomanip>
 using namespace std;
+#define UNUSED -404
 
 
 Student::Student(string stuName, string stuId, int stuAge, string stuSex)
@@ -18,10 +19,11 @@ Student::~Student()
 
 void Student::showStudent()
 {
-	cout << stuName << " "
-		<< stuId << " "
-		<< stuAge << " "
-		<< stuSex << endl;
+	cout << "|"<<setw(8)<<left<<stuName
+		<< "|"<<setw(4)<< stuId 
+		<< "|"<<setw(4)<< stuAge 
+		<< "|"<< setw(4)<<stuSex
+		<<"|"<< endl;
 }
 
 

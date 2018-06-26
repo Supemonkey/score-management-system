@@ -6,12 +6,12 @@ using namespace std;
 
 int main()
 {
-	StuNode *phead, *pend, *pnew;
-	phead = pend = pnew = NULL;
-	phead = initStrt(phead,pend,pnew);
-	show(phead);
-	//menuUI();
-	//menuSelect();
+	//StuNode *phead, *pend, *pnew;
+	//phead = pend = pnew = NULL;
+	//phead = initStrt(phead,pend,pnew);
+	//show(phead);
+	menuUI();
+	menuSelect();
 	system("pause");
 	return 0;
 }

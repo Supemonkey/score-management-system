@@ -16,42 +16,56 @@ void __menuE();
 void __menuF();
 void __menuC();
 void __menuD();
+void getCursor(int , int );
 
 
 void __menuG();
 void menuUI()
 {
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED);
-	time_t t = time(0);
-	char tmp[64];
-	strftime(tmp, sizeof(tmp), "%Y/%m/%d %X %A", localtime(&t));
-	puts(tmp);
-	//getCursor(x, y);
+	getCursor(40,5);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "*********成绩管理系统**********" << endl;
-	cout << "**                           **" << endl;
+	
+	cout <<"**********成绩管理系统***********" ;
+	getCursor(40,6);
+	cout << "**                             **";
+	getCursor(40, 7);
 	cout << "**";
+	getCursor(42, 7);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
-	cout << "A.建立               E.查找";
+	cout << " A.建立               E.查找 ";
+	getCursor(71, 7);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl;
 	cout << "**";
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
-	cout << "B.添加               F.排序";
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl;
+	getCursor(40, 8);
 	cout << "**";
+	getCursor(42, 8);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
-	cout << "C.删除               G.查看";
+	cout << " B.添加               F.排序 ";
+	getCursor(71, 8);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl;
 	cout << "**";
+	getCursor(40, 9);
+	cout << "**";
+	getCursor(42, 9);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
-	cout << "D.修改               H.保存";
+	cout << " C.删除               G.查看 ";
+	getCursor(71,9);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl;
+	cout << "**";
+	getCursor(40, 10);
+	cout << "**";
+	getCursor(42, 10);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
+	cout << " D.修改               H.保存 ";
+	getCursor(71, 10);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "*******************************" << endl;
+	cout << "**";
+	getCursor(40, 11);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "**                             **";
+	getCursor(40, 12);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "*********************************" << endl;
 }
 
 
@@ -60,7 +74,8 @@ void menuSelect()
 {
 	menuUI();
 	char ch;
-	cout << "请选择：" << endl;
+	getCursor(40, 14);
+	cout << "请选择：";
 	cin >> ch;
 	switch (ch)
 	{
@@ -109,33 +124,56 @@ void menuSelect()
 
 void __menuA()
 {
+	getCursor(40, 5);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "*********建立*********" << endl;
-	cout << "**                  **" << endl;
+	cout << "**********创建***********";
+	getCursor(40, 6);
+	cout << "**                             **";
+	getCursor(40, 7);
 	cout << "**";
+	getCursor(42, 7);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
-	cout << "A.创建学生基本信息";
+	cout << " A.创建学生基本信息";
+	getCursor(63, 7);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl << "**";
+	cout << "**";
+	getCursor(40, 8);
+	cout << "**";
+	getCursor(42, 8);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
-	cout << "B.创建学生专业信息"; 
+	cout << " B.创建学生专业信息";
+	getCursor(71, 8);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl << "**";
+	cout << "**";
+	getCursor(40, 9);
+	cout << "**";
+	getCursor(42, 9);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
-	cout << "C.创建学生成绩信息";
+	cout << " C.创建学生成绩信息";
+	getCursor(71, 9);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "**" << endl << "**";
+	cout << "**";
+	getCursor(40, 10);
+	cout << "**";
+	getCursor(42, 10);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
-	cout << "D.返回";
+	cout << " D.返回";
+	getCursor(71, 10);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
-	cout << "            **" << endl;
-	cout << "**********************"<<endl;
-	cout << "请选择：" << endl;
+	cout << "**";
+	getCursor(40, 11);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "**                             **";
+	getCursor(40, 12);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+	cout << "**************************" << endl;
 }
 
 void __menuASelect()
 {
 	char ch;
+	getCursor(40, 14);
+	cout << "请选择:";
 	cin >> ch;
 	switch (ch)
 	{
@@ -327,4 +365,12 @@ void __menuG()
 	cout << "**********************" << endl;
 	cout << "请选择：" << endl;
 }
+
+void getCursor(int x, int y)
+{
+	COORD pos = { x,y };
+	HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleCursorPosition(hOut, pos);
+}
+
 

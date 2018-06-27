@@ -12,6 +12,6 @@ public:
 private:
 	string subjectId;
 	string subjectName;
-	string stuId;
+	string stuId;//Ñ§ÉúÑ§ºÅ
 };
 

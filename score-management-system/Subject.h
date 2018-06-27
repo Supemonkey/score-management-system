@@ -12,6 +12,6 @@ public:
 private:
 	string subjectId;
 	string subjectName;
-	string stuId;//学生学号
+	string stuSubId;//学生学号
 };
 

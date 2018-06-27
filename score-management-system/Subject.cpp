@@ -7,14 +7,14 @@ using namespace std;
 
 Subject::Subject()
 {
-	this->stuId = UNUSED;
+	this->stuSubId = UNUSED;
 	this->subjectName = UNUSED;
 	this->subjectId = UNUSED;
 }
 
 Subject::Subject(string stuId, string subjectName, string subJectId)
 {
-	this->stuId = stuId;
+	this->stuSubId = stuId;
 	this->subjectName = subjectName;
 	this->subjectId = subjectId;
 }
@@ -26,7 +26,7 @@ Subject::~Subject()
 
 void Subject::showSubject()
 {
-	cout << "|" << stuId << "|"
+	cout << "|" << stuSubId << "|"
 		<< subjectName << "|" 
 		<< subjectId << endl;
 }

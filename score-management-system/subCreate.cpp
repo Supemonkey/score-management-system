@@ -3,24 +3,23 @@
 #include <string>
 using namespace std;
 #include "mainHead.h"
-#include "Subject.h"
 
 
 subNode *initSub(subNode *ph, subNode *pe, subNode *pn)
 {
 	string subjectId;
 	string subjectName;
-	string stuId;
+	string stuSubId;
 	pn = new subNode;
 
 	//都接到设计为空节点不适用
 	ph = pe = pn;
 	while (1) {//输入0停止输入
-		cin >> stuId;
-		if (stuId == "0")break; //判断用户是否继续输入数据
+		cin >> stuSubId;
+		if (stuSubId == "0")break; //判断用户是否继续输入数据
 		cin >> subjectName >> subjectId;
 		pn = new subNode;
-		pn->subLinkList = Subject(stuId, subjectName, subjectId);
+		pn->subLinkList = Subject(stuSubId, subjectName, subjectId);
 		pe->next = pn;
 		pe = pn;
 	}
